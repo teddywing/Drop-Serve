@@ -57,6 +57,8 @@
 				fileExistsAtPath:file
 				isDirectory:&isDirectory]) {
 			NSLog(@"%@ not found", file);
+
+			return NO;
 		}
 
 		NSURL *path = [NSURL fileURLWithPath:file isDirectory:isDirectory];
