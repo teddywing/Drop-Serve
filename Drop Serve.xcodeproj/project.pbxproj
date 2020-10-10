@@ -13,6 +13,7 @@
 		D1CA9B09253211050013B767 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D1CA9B07253211050013B767 /* Credits.rtf */; };
 		D1CA9B0C253211050013B767 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CA9B0B253211050013B767 /* AppDelegate.m */; };
 		D1CA9B0F253211050013B767 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1CA9B0D253211050013B767 /* MainMenu.xib */; };
+		D1CA9B17253215150013B767 /* DropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CA9B16253215150013B767 /* DropZone.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		D1CA9B0A253211050013B767 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1CA9B0B253211050013B767 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D1CA9B0E253211050013B767 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D1CA9B15253215150013B767 /* DropZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropZone.h; sourceTree = "<group>"; };
+		D1CA9B16253215150013B767 /* DropZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropZone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 			children = (
 				D1CA9B0A253211050013B767 /* AppDelegate.h */,
 				D1CA9B0B253211050013B767 /* AppDelegate.m */,
+				D1CA9B15253215150013B767 /* DropZone.h */,
+				D1CA9B16253215150013B767 /* DropZone.m */,
 				D1CA9B0D253211050013B767 /* MainMenu.xib */,
 				D1CA9AFF253211040013B767 /* Supporting Files */,
 			);
@@ -168,6 +173,7 @@
 			files = (
 				D1CA9B05253211050013B767 /* main.m in Sources */,
 				D1CA9B0C253211050013B767 /* AppDelegate.m in Sources */,
+				D1CA9B17253215150013B767 /* DropZone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

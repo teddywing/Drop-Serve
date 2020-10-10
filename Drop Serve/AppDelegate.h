@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "DropZone.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
