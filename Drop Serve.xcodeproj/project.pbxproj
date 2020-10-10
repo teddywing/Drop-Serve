@@ -15,6 +15,7 @@
 		D1CA9B0F253211050013B767 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1CA9B0D253211050013B767 /* MainMenu.xib */; };
 		D1CA9B17253215150013B767 /* DropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CA9B16253215150013B767 /* DropZone.m */; };
 		D1CA9B1E253230C60013B767 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CA9B1D253230C60013B767 /* Server.m */; };
+		D1CA9B2125323A2A0013B767 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CA9B2025323A2A0013B767 /* StatusView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		D1CA9B16253215150013B767 /* DropZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropZone.m; sourceTree = "<group>"; };
 		D1CA9B1C253230C60013B767 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
 		D1CA9B1D253230C60013B767 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		D1CA9B1F25323A2A0013B767 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
+		D1CA9B2025323A2A0013B767 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				D1CA9B1C253230C60013B767 /* Server.h */,
 				D1CA9B1D253230C60013B767 /* Server.m */,
 				D1CA9B0D253211050013B767 /* MainMenu.xib */,
+				D1CA9B1F25323A2A0013B767 /* StatusView.h */,
+				D1CA9B2025323A2A0013B767 /* StatusView.m */,
 				D1CA9AFF253211040013B767 /* Supporting Files */,
 			);
 			path = "Drop Serve";
@@ -180,6 +185,7 @@
 				D1CA9B0C253211050013B767 /* AppDelegate.m in Sources */,
 				D1CA9B17253215150013B767 /* DropZone.m in Sources */,
 				D1CA9B1E253230C60013B767 /* Server.m in Sources */,
+				D1CA9B2125323A2A0013B767 /* StatusView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

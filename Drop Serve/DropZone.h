@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "StatusView.h"
+
 @interface DropZone : NSBox <NSDraggingDestination> {
 	IBOutlet NSTextField *_label;
+	IBOutlet StatusView *_status_view;
 }
 
 @end

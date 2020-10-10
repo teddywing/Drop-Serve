@@ -70,7 +70,12 @@
 
 		NSLog(@"%@", url);
 
-		[Server serveAtPath:[url path]];
+		NSString *path = [url path];
+
+		[Server serveAtPath:path];
+
+		[_status_view setPath:path];
+		[_status_view setHidden:NO];
     }
 
     return YES;
