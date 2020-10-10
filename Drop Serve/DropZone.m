@@ -21,6 +21,8 @@
 }
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
+	[_label setStringValue:@""];
+
     NSPasteboard *pboard;
     NSDragOperation sourceDragMask;
 
@@ -43,21 +45,22 @@
 
     if ([[pboard types] containsObject:NSFilenamesPboardType]) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
-		
-		for (int i = 0; i < [files count]; i++) {
-			NSString *file = [files objectAtIndex:i];
-			BOOL isDirectory = false;
 
-			if ([[NSFileManager defaultManager]
-						fileExistsAtPath:file
-						isDirectory:&isDirectory]
-					&& isDirectory) {
-				NSLog(@"%@", file);
-				break;
-			}
+		if ([files count] > 1) {
+			[_label setStringValue:@"Please drop a single folder"];
+		}
+
+		NSString *file = [files objectAtIndex:0];
+		BOOL isDirectory = false;
+
+		if ([[NSFileManager defaultManager]
+					fileExistsAtPath:file
+					isDirectory:&isDirectory]
+				&& isDirectory) {
+			NSLog(@"%@", file);
 		}
     }
-	
+
     return YES;
 }
 

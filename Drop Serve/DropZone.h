@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DropZone : NSBox <NSDraggingDestination>
+@interface DropZone : NSBox <NSDraggingDestination> {
+	IBOutlet NSTextField *_label;
+}
 
 @end
