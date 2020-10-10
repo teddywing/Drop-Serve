@@ -13,39 +13,39 @@
 
 - (id)initWithCoder:(NSCoder *)coder
 {
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self registerForDraggedTypes:[NSArray arrayWithObjects:
-            NSFilenamesPboardType, nil]];
-    }
-    return self;
+	self = [super initWithCoder:coder];
+	if (self) {
+		[self registerForDraggedTypes:[NSArray arrayWithObjects:
+			NSFilenamesPboardType, nil]];
+	}
+	return self;
 }
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
 	[_label setStringValue:@""];
 
-    NSPasteboard *pboard;
-    NSDragOperation sourceDragMask;
+	NSPasteboard *pboard;
+	NSDragOperation sourceDragMask;
 
-    sourceDragMask = [sender draggingSourceOperationMask];
-    pboard = [sender draggingPasteboard];
+	sourceDragMask = [sender draggingSourceOperationMask];
+	pboard = [sender draggingPasteboard];
 
-    if ([[pboard types] containsObject:NSFilenamesPboardType]) {
+	if ([[pboard types] containsObject:NSFilenamesPboardType]) {
 		return NSDragOperationLink;
-    }
+	}
 
-    return NSDragOperationNone;
+	return NSDragOperationNone;
 }
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
-    NSPasteboard *pboard;
-    NSDragOperation sourceDragMask;
+	NSPasteboard *pboard;
+	NSDragOperation sourceDragMask;
 
-    sourceDragMask = [sender draggingSourceOperationMask];
-    pboard = [sender draggingPasteboard];
+	sourceDragMask = [sender draggingSourceOperationMask];
+	pboard = [sender draggingPasteboard];
 
-    if ([[pboard types] containsObject:NSFilenamesPboardType]) {
-        NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
+	if ([[pboard types] containsObject:NSFilenamesPboardType]) {
+		NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
 
 		if ([files count] > 1) {
 			[_label setStringValue:@"Please drop a single folder"];
@@ -80,9 +80,9 @@
 		// Sleep to give the server time to start up before opening the page.
 		[NSThread sleepForTimeInterval:0.5];
 		[Server openInBrowser];
-    }
+	}
 
-    return YES;
+	return YES;
 }
 
 @end
