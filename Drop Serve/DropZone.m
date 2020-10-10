@@ -53,12 +53,19 @@
 		NSString *file = [files objectAtIndex:0];
 		BOOL isDirectory = false;
 
-		if ([[NSFileManager defaultManager]
-					fileExistsAtPath:file
-					isDirectory:&isDirectory]
-				&& isDirectory) {
-			NSLog(@"%@", file);
+		if (![[NSFileManager defaultManager]
+				fileExistsAtPath:file
+				isDirectory:&isDirectory]) {
+			NSLog(@"%@ not found", file);
 		}
+
+		NSURL *path = [NSURL fileURLWithPath:file isDirectory:isDirectory];
+
+		if (!isDirectory) {
+			path = [path URLByDeletingLastPathComponent];
+		}
+
+		NSLog(@"%@", path);
     }
 
     return YES;
