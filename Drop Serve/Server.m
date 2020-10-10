@@ -27,7 +27,7 @@
 
 + (void)stop
 {
-	[_process interrupt];
+	[_process terminate];
 	[_process dealloc];
 }
 
