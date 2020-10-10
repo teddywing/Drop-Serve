@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "Server.h"
+
 @implementation AppDelegate
 
 - (void)dealloc
@@ -17,6 +19,11 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+}
+
+- (void)applicationWillTerminate:(NSNotification *)notification
+{
+	[Server stop];
 }
 
 @end

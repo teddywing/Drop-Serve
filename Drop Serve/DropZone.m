@@ -7,6 +7,7 @@
 //
 
 #import "DropZone.h"
+#import "Server.h"
 
 @implementation DropZone
 
@@ -61,13 +62,15 @@
 			return NO;
 		}
 
-		NSURL *path = [NSURL fileURLWithPath:file isDirectory:isDirectory];
+		NSURL *url = [NSURL fileURLWithPath:file isDirectory:isDirectory];
 
 		if (!isDirectory) {
-			path = [path URLByDeletingLastPathComponent];
+			url = [url URLByDeletingLastPathComponent];
 		}
 
-		NSLog(@"%@", path);
+		NSLog(@"%@", url);
+
+		[Server serveAtPath:[url path]];
     }
 
     return YES;
