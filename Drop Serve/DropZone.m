@@ -44,7 +44,18 @@
     if ([[pboard types] containsObject:NSFilenamesPboardType]) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
 		
-		NSLog(@"%@", files);
+		for (int i = 0; i < [files count]; i++) {
+			NSString *file = [files objectAtIndex:i];
+			BOOL isDirectory = false;
+
+			if ([[NSFileManager defaultManager]
+						fileExistsAtPath:file
+						isDirectory:&isDirectory]
+					&& isDirectory) {
+				NSLog(@"%@", file);
+				break;
+			}
+		}
     }
 	
     return YES;
