@@ -12,6 +12,8 @@
 
 + (void)serveAtPath:(NSString *)path
 {
+	[self stop];
+
 	_process = [[NSTask alloc] init];
 	[_process setCurrentDirectoryPath:path];
 	[_process setLaunchPath:@"/usr/bin/python"];
@@ -27,7 +29,10 @@
 
 + (void)stop
 {
-	[_process terminate];
+	if ([_process isRunning]) {
+		[_process terminate];
+	}
+
 	[_process dealloc];
 }
 
