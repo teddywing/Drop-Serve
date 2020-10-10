@@ -30,4 +30,10 @@
 	[_process interrupt];
 }
 
++ (void)openInBrowser
+{
+	[[NSWorkspace sharedWorkspace]
+		openURL:[NSURL URLWithString:@"http://localhost:8000"]];
+}
+
 @end

@@ -15,4 +15,6 @@ NSTask *_process;
 + (void)serveAtPath:(NSString *)path;
 + (void)stop;
 
++ (void)openInBrowser;
+
 @end

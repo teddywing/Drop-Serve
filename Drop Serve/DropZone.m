@@ -76,6 +76,8 @@
 
 		[_status_view setPath:path];
 		[_status_view setHidden:NO];
+
+		[Server openInBrowser];
     }
 
     return YES;
