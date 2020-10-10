@@ -19,6 +19,7 @@
 - (IBAction)stopServer:(id)sender
 {
 	[Server stop];
+	[self setHidden:YES];
 }
 
 @end
