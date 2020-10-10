@@ -28,6 +28,7 @@
 + (void)stop
 {
 	[_process interrupt];
+	[_process dealloc];
 }
 
 + (void)openInBrowser
