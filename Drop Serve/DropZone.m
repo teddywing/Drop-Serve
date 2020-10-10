@@ -78,7 +78,7 @@
 		[_status_view setHidden:NO];
 
 		// Sleep to give the server time to start up before opening the page.
-		[NSThread sleepForTimeInterval:1];
+		[NSThread sleepForTimeInterval:0.5];
 		[Server openInBrowser];
     }
 
