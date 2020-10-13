@@ -49,6 +49,8 @@
 
 		if ([files count] > 1) {
 			[_label setStringValue:@"Please drop a single folder"];
+
+			return NO;
 		}
 
 		NSString *file = [files objectAtIndex:0];
