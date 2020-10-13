@@ -17,8 +17,9 @@
 	[super dealloc];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
+	return YES;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
